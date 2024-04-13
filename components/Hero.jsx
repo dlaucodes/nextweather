@@ -21,7 +21,7 @@ const Hero = () => {
   const fetchWeatherData = async (city) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/weather/city?city=${city}`
+        `https://arn:aws:lambda:us-east-1:906195619673:function:express/weather/city?city=${city}`
       );
       const weatherData = await response.json();
       setWeatherData(weatherData);
