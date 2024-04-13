@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Weather App
 
-## Getting Started
+## Background
 
-First, run the development server:
+   <img src="">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p>
+    Next Weather App is a User-friendly weather app.  User's are able to view weather conditions based on city input.  Toggle between Fahrenheit and Celsius Measurements.  View 5 day upcoming forecast.
+    <br>
+    Live site: https://nextweather-mu.vercel.app/
+</p>
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### City input
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<img src="">
 
-## Learn More
+<br>
+<ul>
+    <li>Users are able to input a city of their choice to get weather info
+    <li>Users are able to Log in
+    <li>Users are able to Log out
+    <li>Users can sign in as a Demo User
+</ul>
 
-To learn more about Next.js, take a look at the following resources:
+### Light/Dark Mode
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="">
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<ul>
+    <li>Users are able to toggle between a light theme and dark theme.
+</ul>
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Technologies, Libraries, APIs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br>
+<ul>
+    <li> Next.js
+    <li> Node.js
+    <li> Express.js
+    <li> React.js
+    <li> CSS/HTML
+    <li> 
+</ul>
+<br>
+<br>
+
+## Future Features
+
+<br>
+<ul>
+    <li> Implement User's current weather conditions through IP.
+</ul>
+<br>
+
+## Credits & Resources
+
+<ul>
+    <li>Heroku hosting backend express server.
+    <li>Vercel hosting live site.
+</ul>
