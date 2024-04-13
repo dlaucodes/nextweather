@@ -31,7 +31,7 @@ const CityInputForm = ({onWeatherData, setCity}) => {
 
   return (
     <div className="flex flex-col items-center mt-10">
-    <form onSubmit={handleSubmit} className="flex justify-between gap-x-2">
+    <form onSubmit={handleSubmit} className="flex justify-between flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-2">
       <Input className=""
       type="text"
       value={inputCity}

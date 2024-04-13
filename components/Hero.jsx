@@ -4,7 +4,6 @@ import CityInputForm from "./CityInputForm";
 import { Button } from "./ui/button";
 import {
   TiWeatherSunny,
-  TiWeatherPartlySunny,
   TiWeatherCloudy,
   TiWeatherStormy,
   TiWeatherSnow,
@@ -72,14 +71,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-screen md:h-full h-screen flex flex-col items-center jsutify-center border dark:border-primary m-8 rounded-2xl">
+    <section className="h-screen md:h-full h-screen overflow-auto flex flex-col items-center jsutify-center border dark:border-primary m-8 rounded-2xl">
       {weatherData && (
         <div className="items-center flex flex-col">
           {/* city search input bar */}
           <CityInputForm onWeatherData={handleWeatherData} setCity={setCity} />
            {/*current  city */}
           <div className="pb-2 pt-6 text-3xl">{city}</div>
-          <div className="grid grid-cols-2">
+          <div className="grid md:grid-cols-2 pb-6 md:pb-0">
             {/* temperature */}
             <div className="text-8xl flex items-center py-6">
               {isCelsius
@@ -109,11 +108,11 @@ const Hero = () => {
             {isCelsius ? "Switch to Fahrenheit" : "Switch to Celsius"}
           </Button>
 
-          <div className="flex items-center md:w-full p-6 gap-6 justify-center flex-wrap">
+          <div className="flex items-center md:w-full grid grid-cols-2 md:grid-cols-5 p-6 gap-6 justify-center flex-wrap">
             {weatherData.daily.slice(1, 6).map((day, index) => (
               <div key={index}>
                 {/* 5-day forecast cards */}
-                <Card className="flex flex-col justify-center items-center w-[150px] h-[150px]">
+                <Card className="flex flex-col justify-center items-center md:w-[150px] md:h-[150px]">
                   <span className="text-4xl drop-shadow-2xl">
                     {getWeatherIcon(day.weather[0].main)}
                   </span>
