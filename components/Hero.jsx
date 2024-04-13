@@ -71,7 +71,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-screen md:h-full h-screen overflow-auto flex flex-col items-center jsutify-center border dark:border-primary m-8 rounded-2xl">
+    <section className="h-full flex flex-col items-center jsutify-center border dark:border-primary m-8 rounded-2xl">
       {weatherData && (
         <div className="items-center flex flex-col">
           {/* city search input bar */}
