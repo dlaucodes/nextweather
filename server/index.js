@@ -59,8 +59,8 @@ app.get('/weather/city', async (req, res)=> {
 });
 
 
-app.listen(PORT, ()=> {
-    console.log(`Server Started on port ${PORT}`);
-});
+// app.listen(PORT, ()=> {
+//     console.log(`Server Started on port ${PORT}`);
+// });
 
 module.exports.handler = serverless(app);

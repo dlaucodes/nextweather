@@ -24,8 +24,6 @@
   "keywords": [
     "example",
     "heroku"
-  ],
-  "engines": {
-    "node": "21.x"
-  }
+  ]
+
 }
