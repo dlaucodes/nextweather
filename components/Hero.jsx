@@ -87,8 +87,8 @@ const Hero = () => {
               {isCelsius ? "°C" : "°F"}
             </div>
                  {/* weather icon */}
-            <div className="flex justify-center flex-col px-8">
-              <div className="flex">
+            <div className="flex justify-center flex-col items-center px-8">
+              <div className="flex gap-x-2">
                 <span className="text-2xl flex">
                   {getWeatherIcon(weatherData.current.weather[0].main)}
                 </span>
@@ -96,7 +96,7 @@ const Hero = () => {
                   {weatherData.current.weather[0].description}
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center gap-x-2">
                 <span className="text-2xl">
                   <IconWiStrongWind />
                 </span>
