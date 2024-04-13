@@ -25,6 +25,20 @@ const buildGeolocationURL = (cityName, stateCode='', countryCode='', limit=1)=> 
 
 app.use(cors());
 
+const makeGeoLocationRequest = async (city) => {
+    const geoLocationURL = buildGeolocationURL(city)
+    const geoLocationResp = await fetch(geoLocationURL)
+    const geoLocationData = await geoLocationResp.json()
+    return geoLocationData
+}
+
+const makeWeatherRequest = async (lat, lon) => {
+    const weatherURL = buildWeatherByCityURL(lat, lon)
+    const weatherResp = await fetch(weatherURL)
+    const weatherData = await weatherResp.json()
+    return weatherData
+}
+
 app.get('/weather/city', async (req, res)=> {
     //get lat and lon from city input via a request
     const city = req.query.city
@@ -34,9 +48,7 @@ app.get('/weather/city', async (req, res)=> {
     }
 
     //build URL and make a request get lat and lon
-    const geoLocationURL = buildGeolocationURL(city)
-    const geoLocationResp = await fetch(geoLocationURL)
-    const geoLocationData = await geoLocationResp.json()
+    const geoLocationData = await makeGeoLocationRequest(city)
 
     //check data length is valid
     if (geoLocationData.length < 1){
@@ -45,12 +57,11 @@ app.get('/weather/city', async (req, res)=> {
 
     //pull out first item in data arary since it reurns an array of objects
     const cityData = geoLocationData[0]
-
     const {lat, lon} = cityData
 
-    const weatherURL = buildWeatherByCityURL(lat, lon)
-    const weatherResp = await fetch(weatherURL)
-    const weatherData = await weatherResp.json()
+    const weatherData = await makeWeatherRequest(lat, lon)
+
+    
 
     res.json(
        weatherData

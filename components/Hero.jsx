@@ -85,7 +85,7 @@ const Hero = () => {
               {isCelsius
                 ? convertToCelsius(weatherData.current.temp).toFixed(0)
                 : convertToFahrenheit(weatherData.current.temp).toFixed(0)}{" "}
-              {isCelsius ? "°" : "°"}
+              {isCelsius ? "°C" : "°F"}
             </div>
                  {/* weather icon */}
             <div className="flex justify-center flex-col px-8">
