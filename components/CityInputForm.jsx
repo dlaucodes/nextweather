@@ -1,33 +1,39 @@
 'use client'
 import React from 'react'
 import { useState } from 'react'
+import { Button } from './ui/button'
+import { Input } from './ui/input'
 
-const CityInputForm = ({onWeatherData}) => {
-  const [city, setCity] = useState('')
+
+const CityInputForm = ({onWeatherData, setCity}) => {
+  const [inputCity, setInputCity] = useState('')
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:8080/weather/city?city="${city}"`)
+    const response = await fetch(`http://localhost:8080/weather/city?city="${inputCity}"`)
     const weatherData = await response.json()
-    onWeatherData(weatherData)
-    console.log(response)
+    onWeatherData(weatherData);
+    setCity(inputCity);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input className="text-black"
+    <div className="flex items-cente mt-10">
+    <form onSubmit={handleSubmit} className="flex justify-between gap-x-2">
+      <Input className=""
       type="text"
-      value={city}
-      onChange={(e)=> setCity(e.target.value)}
+      value={inputCity}
+      onChange={(e)=> setInputCity(e.target.value)}
       placeholder="Enter City Name"
-      >
-      </input>
-      <button
+      />
+     
+      <Button
       type="submit"
       >
         Get weather info
-      </button>
+      </Button>
     </form>
+
+    </div>
       
     
   )
