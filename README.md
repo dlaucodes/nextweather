@@ -2,7 +2,7 @@
 
 ## Background
 
-   <img src="">
+   <img src="https://github.com/dlaucodes/nextweather/blob/main/public/nextweatherdefault.png?raw=true">
 
 <p>
     Next Weather App is a User-friendly weather app.  User's are able to view weather conditions based on city input.  Toggle between Fahrenheit and Celsius Measurements.  View 5 day upcoming forecast.
@@ -15,16 +15,27 @@
 
 ### City input
 
-<img src="">
+<img src="https://github.com/dlaucodes/nextweather/blob/main/public/CityInput.gif?raw=true">
 
 <br>
 <ul>
     <li>Users are able to input a city of their choice to get weather info.
 </ul>
 
+### Temperature Toggle
+
+<img src="https://github.com/dlaucodes/nextweather/blob/main/public/TemperatureToggle.gif?raw=true">
+<br>
+
+<ul>
+    <li>Users are able to toggle temperature between Fahrenheit and Celsius.
+</ul>
+
+<br>
+
 ### Light/Dark Mode
 
-<img src="">
+<img src="https://github.com/dlaucodes/nextweather/blob/main/public/ThemeToggle.gif?raw=true">
 <br>
 
 <ul>
