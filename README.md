@@ -19,10 +19,7 @@
 
 <br>
 <ul>
-    <li>Users are able to input a city of their choice to get weather info
-    <li>Users are able to Log in
-    <li>Users are able to Log out
-    <li>Users can sign in as a Demo User
+    <li>Users are able to input a city of their choice to get weather info.
 </ul>
 
 ### Light/Dark Mode
@@ -45,7 +42,9 @@
     <li> Express.js
     <li> React.js
     <li> CSS/HTML
-    <li> 
+    <li> Shadcn-ui
+    <li> TailwindCss
+    <li> Open Weather API
 </ul>
 <br>
 <br>
@@ -54,7 +53,7 @@
 
 <br>
 <ul>
-    <li> Implement User's current weather conditions through IP.
+    <li> Implement User's current weather conditions through IP.  Currently defaults to New York weather conditions until a new city is given.
 </ul>
 <br>
 
