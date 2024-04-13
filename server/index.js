@@ -8,7 +8,7 @@ import {config} from 'dotenv';
 config()
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const API_KEY = "d2c5063765dcb7d0bdd46e8c3ce52011"
 // const API_KEY = process.env.WEATHER_KEY
 const WEATHER_BY_CITY_URL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API_KEY}`
@@ -41,7 +41,7 @@ app.get('/weather/city', async (req, res)=> {
 
     //check data length is valid
     if (geoLocationData.length < 1){
-        throw new Error('No locations were found for this city.')
+        throw new Error('No locations were found for this city')
     }
 
     //pull out first item in data arary since it reurns an array of objects
@@ -53,7 +53,7 @@ app.get('/weather/city', async (req, res)=> {
     const weatherResp = await fetch(weatherURL)
     const weatherData = await weatherResp.json()
 
-    res.send(
+    res.json(
        weatherData
     )
 });
