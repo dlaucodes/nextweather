@@ -16,7 +16,7 @@ const CityInputForm = ({onWeatherData, setCity}) => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:8080/weather/city?city=${inputCity}`);
+      const response = await fetch(`https://z6978oi30g.execute-api.us-east-1.amazonaws.com/prod/weather/city=${inputCity}`);
       if (!response.ok) {
         throw new Error('City not found.');
       }
