@@ -64,7 +64,7 @@
 
 <br>
 <ul>
-    <li> Implement User's current weather conditions through IP.  Currently defaults to New York weather conditions until a new city is given.
+    <li> Implement User's current weather conditions through IP by default.  Currently defaults to New York weather conditions until a new city is given.
 </ul>
 <br>
 
