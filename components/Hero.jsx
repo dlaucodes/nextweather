@@ -21,7 +21,7 @@ const Hero = () => {
   const fetchWeatherData = async (city) => {
     try {
       const response = await fetch(
-        `https://tn1fdltka7.execute-api.us-east-1.amazonaws.com/prod/weather/city?city=${city}`
+        `https://enigmatic-sands-37742-9e61dfac3608.herokuapp.com/weather/city?city=${city}`
       );
       const weatherData = await response.json();
       setWeatherData(weatherData);
