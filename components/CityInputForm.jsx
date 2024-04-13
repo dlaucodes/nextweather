@@ -16,7 +16,7 @@ const CityInputForm = ({onWeatherData, setCity}) => {
       return;
     }
     try {
-      const response = await fetch(`https://dlaucodes.github.io/nextweather/weather/city?city=${inputCity}`);
+      const response = await fetch(`https://nextweather-mu.vercel.app/weather/city?city=${inputCity}`);
       if (!response.ok) {
         throw new Error('City not found.');
       }
