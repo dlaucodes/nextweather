@@ -5,7 +5,7 @@
    <img src="https://github.com/dlaucodes/nextweather/blob/main/public/nextweatherdefault.png?raw=true">
 
 <p>
-    Next Weather App is a User-friendly weather app.  User's are able to view weather conditions based on city input.  Toggle between Fahrenheit and Celsius Measurements.  View 5 day upcoming forecast.
+    Next Weather App is a User-friendly weather app.  User's are able to view weather conditions based on city input, toggle between Fahrenheit and Celsius Measurements, and view 5 day upcoming forecast.  Application is built with NextJS and Express backend.
     <br>
     Live site: https://nextweather-mu.vercel.app/
 </p>
