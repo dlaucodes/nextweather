@@ -21,7 +21,7 @@ const Hero = () => {
   const fetchWeatherData = async (city) => {
     try {
       const response = await fetch(
-        `https://z6978oi30g.execute-api.us-east-1.amazonaws.com/prod/weather/city=${city}`
+        `http://localhost:8080/weather/city?city=${city}`
       );
       const weatherData = await response.json();
       setWeatherData(weatherData);

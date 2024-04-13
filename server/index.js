@@ -7,11 +7,10 @@ import serverless from 'serverless-http';
 
 config()
 
-
 const app = express();
-// const PORT = 8080;
-// const API_KEY = "d2c5063765dcb7d0bdd46e8c3ce52011"
-const API_KEY = process.env.WEATHER_KEY
+const PORT = 8080;
+const API_KEY = "d2c5063765dcb7d0bdd46e8c3ce52011"
+// const API_KEY = process.env.WEATHER_KEY
 const WEATHER_BY_CITY_URL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API_KEY}`
 
 const buildWeatherByCityURL = (lat, lon) => {
@@ -54,8 +53,7 @@ app.get('/weather/city', async (req, res)=> {
     const weatherResp = await fetch(weatherURL)
     const weatherData = await weatherResp.json()
 
-    console.log(weatherURL)
-    res.json(
+    res.send(
        weatherData
     )
 });
@@ -63,8 +61,8 @@ app.get('/weather/city', async (req, res)=> {
 
 
 
-// app.listen(PORT, ()=> {
-//     console.log(`Server Started on port ${PORT}`);
-// });
+app.listen(PORT, ()=> {
+    console.log(`Server Started on port ${PORT}`);
+});
 
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
